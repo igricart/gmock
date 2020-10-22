@@ -7,7 +7,7 @@ private:
 	int number_;
 
 public:
-	myClass();
+	myClass(int number);
 	virtual int addNumber(int number);
 	virtual ~myClass();
 };
@@ -15,5 +15,6 @@ public:
 class mockMyClass : public myClass
 {
 public:
+	mockMyClass(int number);
 	MOCK_METHOD(int, addNumber, (int number), (override));
 };

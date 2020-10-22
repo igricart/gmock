@@ -8,10 +8,10 @@ using namespace ::testing;
 TEST(MyTest, addNumber)
 {
 	EXPECT_TRUE(1);
-	mockMyClass my_mock_class;
+	mockMyClass my_mock_class(1);
 	EXPECT_CALL(my_mock_class, addNumber(1))
 		.Times(AtLeast(1));
-	myClass my_class;
+	myClass my_class(1);
 	my_mock_class.addNumber(1);
 }
 
